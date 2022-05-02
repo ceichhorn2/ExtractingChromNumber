@@ -7,3 +7,5 @@ for i in range(len(values)):
   for word in line:
     if 'chr6' in word:
       output.append(line)
+with open('rn7sk.extracted.iclip2.plus.bedgraph', 'w') as file:
+  file.writelines('\t'.join(i) + '\n' for i in output)
