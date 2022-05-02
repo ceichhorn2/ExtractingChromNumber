@@ -1,0 +1,9 @@
+with open("inputfile.bedgraph") as inp:
+  values = list((line.strip().split('\t') for line in inp))
+
+output = []
+for i in range(len(values)):
+  line = values[i]
+  for word in line:
+    if 'chr6' in word:
+      output.append(line)
